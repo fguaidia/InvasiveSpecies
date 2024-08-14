@@ -31,13 +31,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     <img src="${specie.urlImage}" class="card-img-top" alt="${specie.name}">
                     <div class="card-body">
                         <h5 class="card-title">${specie.name} (${specie.scientificName})</h5>
-                        <p class="card-text"><strong>Common Names:</strong> ${specie.commonNames}</p>
+                        <p class="card-text"><strong>Nombre común:</strong> ${specie.commonNames}</p>
                         <div class="toggle-content">
-                            <p><strong>Impact:</strong> ${specie.impact}</p>
-                            <p><strong>Management:</strong> ${specie.manage}</p>
+                            <p><strong>Impacto:</strong> ${specie.impact}</p>
+                            <p><strong>Manejo:</strong> ${specie.manage}</p>
                         </div>
-                        <button class="btn btn-primary" onclick="toggleContent(this)">Show Details</button>
-                        <p class="card-text"><strong>Risk Level:</strong> ${specie.riskLevel}</p>
+                        <button class="btn btn-primary" onclick="toggleContent(this)">Ver más</button>
+                        <p class="card-text"><strong>Nivel de riesgo:</strong> ${specie.riskLevel}</p>
                     </div>
                 </div>
             `;
@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (isVisible) {
             toggleContent.style.display = 'none';
-            button.textContent = 'Show Details';
+            button.textContent = 'Ver más';
         } else {
             toggleContent.style.display = 'block';
-            button.textContent = 'Hide Details';
+            button.textContent = 'Ver menos';
         }
     }
 
